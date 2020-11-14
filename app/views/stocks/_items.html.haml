@@ -1,0 +1,28 @@
+.primal
+  .primal__top
+    STOCK-APP 入荷・出荷
+
+  .items-table
+    .items-table__head
+      商品一覧
+    %table
+      %tbody
+        %tr
+          %th.name
+            商品名
+          %th.stock
+            在庫数
+          %th.inc-dec
+            在庫数の変更
+      - @stocks.each do |stock|
+        %tr.items-data
+          %td
+            =stock.name
+          %td#stock-origin
+            =stock.count
+          %td
+            =link_to "更新",edit_stock_path(stock.id)
+
+
+
+

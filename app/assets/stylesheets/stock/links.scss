@@ -1,0 +1,53 @@
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+}
+
+.top-side{
+  width: 300px;
+  color: $tomato;
+  .side-menu{
+    height: 150px;
+    width: 300px;
+    background-color: $spinach;
+    font-size: 30px;
+    &__names{
+      text-align: center;
+      list-style: none;
+      &__user{
+        padding: 10px;
+      }
+    }
+  }
+}
+
+  .menu{
+    width: 300px;
+    height: calc(100vh - 150px);
+    background-color: $lettuce;
+    font-size: 30px;
+    text-align: center;
+    &__top{
+      color: $tomato;
+      padding-top: 10px;
+      &__lists{
+        padding-top: 20px;
+        &__links{
+          padding-top: 5px;
+          &__btn{
+            text-decoration: none;
+            color: $carrot;
+          }
+        }
+      }
+    }
+  }
+
+    #logout{
+      color: $tomato;
+      padding-top: 10px;
+    }

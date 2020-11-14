@@ -1,0 +1,46 @@
+.primal{
+  width: calc(100vw - 300px);
+  &__top{
+    height: 150px;
+    font-size: 40px;
+    color:$tomato;
+    text-align: center;
+    background-color: $cabbage;
+    padding-top: 40px;
+  }
+}
+
+  
+  .items-table{
+    width: 100%;
+    height: calc(100vh - 150px);
+    border-collapse: collapse;
+    background-color: $potato;
+    &__head{
+      text-align: center;
+      color: $tomato;
+    }
+  }
+
+    table,th,tr,td{
+      border: 1px solid;
+      text-align: center;
+      border-collapse: collapse;
+      margin-left:auto;
+      margin-right:auto;
+        tbody{
+          height: 30px;
+          ;
+          th{
+            background-color: $carrot;
+            }
+          }
+        }
+        
+        .name{
+          width: 100px;
+        }
+
+        .stock{
+          width: 200px;
+        }
