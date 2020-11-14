@@ -1,0 +1,32 @@
+.primal
+  .primal__top
+    STOCK-APP 入荷・出荷
+
+  .add
+    .add__area
+      =@stocks.name
+      .add__area__text
+        の在庫数を更新
+  
+    %table
+      %tbody
+        %tr
+          %th.stock
+            現在の在庫数
+          %th.shipment
+            在庫数の更新
+
+        %tr
+          %td
+            =@stocks.count
+          %td
+            =form_with model: @stock,url: stock_path,method: :put do |f|
+              =f.number_field :count , placeholder: "新規の在庫数"
+              =f.submit "更新する"
+                
+
+
+      
+
+
+

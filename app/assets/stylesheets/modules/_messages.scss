@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+}
+
+.side-bar{
+  width: 300px;
+  color: $white;
+  .user-name{
+    height: 100px;
+    background-color: $tomato;
+    display: flex;
+    align-items: center;
+    font-size: $size_middium;
+  .top-items{
+    height:20px;
+    width:260px;
+    margin: 0 20px; 
+    display: flex;
+    justify-content: space-between;
+    &__name{
+    font-weight: bold;
+    font-size: $size_middium;
+    }
+    &__function{
+      display: inline-block;
+    }
+    .mark{
+      display: inline-block;
+      color: $white;
+    }
+  }
+}
+
+.group-list{
+  height: calc(100vh - 100px);
+  background-color: $carrot;
+  font-family: bold;
+  padding: 0 20px;
+  .groups{
+  padding: 20px 0 40px;
+  &__name{
+    font-size: $size_small;
+    color: $white;
+  }
+  &__message{
+    font-size: 11px;
+    margin-top: 5px;
+    color: $white;
+}
+    }
+  }
+}
+  

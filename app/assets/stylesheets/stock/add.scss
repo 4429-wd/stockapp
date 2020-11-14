@@ -1,0 +1,30 @@
+  .add{
+    height: calc(100vh - 150px);
+    width: 100%;
+    background-color: $potato;
+    &__area{
+      text-align: center;
+    }
+  }
+    .add-form__text{
+       text-align: center;
+       display: flex;
+       justify-content: center;
+      &__stock{
+        display: contents;
+        &__item{
+          display: flex;
+          justify-content: center;
+
+        }
+      }
+    }
+
+    .add-form__text__stock__plus{
+      color: $tomato;
+    }
+
+    .form-decide{
+      text-align: center;
+      color: $tomato;
+    }
