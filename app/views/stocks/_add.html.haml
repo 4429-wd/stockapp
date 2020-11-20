@@ -12,10 +12,5 @@
           = f.number_field :count, placeholder: "在庫数を入力" 
           = f.submit '以上の商品を追加', class: 'form-decide__btn'
 
-        #input_plurarBox
-          #input_plural
-            %input.form-control{ :type => "text" :placeholder =>"更に商品を追加する"}
-            %input.add-pluralBtn{:type => "button" :value => "＋"}
-            %input.del-pluralBtn{:type => "button" :value => "－"}
     .back
       = link_to "戻る", root_path,class: "back__btn"
