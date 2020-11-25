@@ -14,12 +14,13 @@
     height: 150px;
     width: 300px;
     background-color: $spinach;
-    font-size: 30px;
     &__names{
       text-align: center;
       list-style: none;
+      padding-top: 20px;
       &__user{
         padding: 10px;
+        font-size: 20px;
       }
     }
   }
@@ -29,7 +30,7 @@
     width: 300px;
     height: calc(100vh - 150px);
     background-color: $lettuce;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     &__top{
       color: $tomato;
@@ -37,6 +38,7 @@
       &__lists{
         padding-top: 20px;
         &__links{
+          font-size: 30px;
           padding-top: 5px;
           &__btn{
             text-decoration: none;
