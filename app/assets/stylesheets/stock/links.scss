@@ -14,12 +14,12 @@
     height: 150px;
     width: 300px;
     background-color: $spinach;
-    font-size: 30px;
     &__names{
       text-align: center;
       list-style: none;
       &__user{
-        padding: 10px;
+        font-size: 20px;
+        padding-top: 30px;
       }
     }
   }
@@ -41,6 +41,7 @@
           &__btn{
             text-decoration: none;
             color: $carrot;
+            font-size: 20px;
           }
         }
       }
