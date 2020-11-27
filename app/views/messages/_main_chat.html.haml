@@ -13,11 +13,3 @@
   .messages
     = render @message
  
-  .form
-    = form_with [@group, @message] do |f|
-      = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
-      .form__space
-        = f.label :image, class: 'form__space__image' do
-          = icon('fa','image', class: 'img')
-          = f.file_field :image, class: 'hide'
-      = f.submit 'Send', class: 'form__submit'
