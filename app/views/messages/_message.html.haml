@@ -1,9 +1,9 @@
 .message{data: {message: {id: message.id}}}
   .over
     .over__user-name
-      = @message.user
+      = message.user
     .over__date
-      = "%Y年%m月%d日 %H時%M分"
+
   .under
     - if message.text.present?
       %p.under__content
