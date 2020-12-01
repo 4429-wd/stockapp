@@ -9,13 +9,6 @@
       = form_for(current_user) do |f|
         .field
           .field-label
-            = f.label :store
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
             = f.label :email
           .field-input
             = f.email_field :email
