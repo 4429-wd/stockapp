@@ -57,8 +57,4 @@ ActiveRecord::Schema.define(version: 2020_11_14_090614) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "group_users", "groups"
-  add_foreign_key "group_users", "users"
-  add_foreign_key "messages", "groups"
-  add_foreign_key "messages", "users"
 end

@@ -19,5 +19,7 @@
         -# %li.menu__top__lists__links
         -#   = link_to "チャット",groups_path,class: "menu__top__lists__links__btn"
         %li.menu__top__lists__links
+          = link_to "メアド編集",edit_user_path(current_user) ,class: "menu__top__lists__links__btn"
+        %li.menu__top__lists__links
           =link_to "ログアウト", users_sign_out_path,class: "menu__top__lists__links__btn",id: "logout"
   
