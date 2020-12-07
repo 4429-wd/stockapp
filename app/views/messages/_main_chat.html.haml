@@ -3,18 +3,15 @@
     .left-list
       
       .left-list__members
-        Member: 
-        %ul
 
     .right-list
-      =link_to "Edit",class: "editlink"
+      =link_to "Edit", class: "editlink"
 
   .messages
-
  
   .form
     -# = form_for [@group, @message] do |f|
-    -#   = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
+      = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
       .form__space
         = f.label :image, class: 'form__space__image' do
           = icon('fa','image', class: 'img')

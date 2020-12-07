@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_11_14_090614) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_messages_on_group_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "stocks", force: :cascade do |t|

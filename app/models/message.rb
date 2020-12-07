@@ -8,6 +8,6 @@ class Message < ApplicationRecord
 
   private
   def message_params
-    params.require(:message).permit(:content).merge(group_id: current_group.id)
+    params.require(:message).permit(:text).merge(group_id: current_group.id)
   end
 end
