@@ -11,7 +11,7 @@ set :rbenv_ruby, '2.5.1'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/stockapp.pem）>'] 
+                  keys: ['~/.ssh/id_rsa.pem）>'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
@@ -22,6 +22,7 @@ set :keep_releases, 5
 
 # デプロイ処理が終わった後、Unicornを再起動するための記述
 after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
