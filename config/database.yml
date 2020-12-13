@@ -26,5 +26,5 @@ production:
   pool: 5
   database: stockapp
   username: root
-  password:
+  password: EfGdlc&yf6rJ
   socket: /var/lib/mysql/mysql.sock
