@@ -10,7 +10,7 @@
   .messages
  
   .form
-    -# = form_for [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
       .form__space
         = f.label :image, class: 'form__space__image' do
