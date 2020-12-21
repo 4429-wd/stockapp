@@ -1,20 +1,16 @@
 .main-chat
   .member-list
     .left-list
-      = @group.users 
+      
       .left-list__members
-        Member: 
-        %ul
-        - @group.users.each do |user|
-          %li= user.user
+
     .right-list
-      =link_to "Edit", edit_user_path(current_user),class: "editlink"
+      =link_to "Edit", class: "editlink"
 
   .messages
-    = render @message
  
   .form
-    = form_with [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
       .form__space
         = f.label :image, class: 'form__space__image' do
