@@ -44,11 +44,11 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'capistrano3-unicorn'
   gem 'capistrano-rails-console'
   gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -77,15 +77,15 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'haml-rails'
-gem 'devise'
-gem 'sqlite3'
-group :production, :staging do
-  gem 'unicorn'
+group :productiondo, :staging do
+  gem 'unicorn', '5.4.1'
 end
 
 gem 'haml-rails'
 gem "font-awesome-sass"
 gem 'jquery-rails'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'haml-rails'
+gem 'devise'
+gem 'sqlite3'
 gem 'aws-sdk-s3', require: false
