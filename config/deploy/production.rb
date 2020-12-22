@@ -1,4 +1,3 @@
-
 server '3.114.40.165', user: 'ec2-user', roles: %w{app db web} 
 set :ssh_options, keys: '~/.ssh/first_aws_rsa' 
 # server-based syntax
