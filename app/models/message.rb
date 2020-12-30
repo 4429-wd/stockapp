@@ -4,7 +4,7 @@ class Message < ApplicationRecord
 
   validates :content, presence: true, unless: :image?
 
-  # mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
 
   private
   def message_params
