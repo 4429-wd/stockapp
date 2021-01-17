@@ -2,6 +2,9 @@ server '3.114.40.165', user: 'ec2-user', roles: %w{app db web}
 
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
+set :ssh_options, {
+  keys: [File.expand_path('~/.ssh/stockapp.pem)')]
+ }
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
