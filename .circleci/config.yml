@@ -3,20 +3,13 @@ orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
-  deploy:
-    machine:
-      enabled: true
+  build:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "xxxxxxxxxxxxxxxxxxxxxxxxxxx" #上記メモったハッシュを指定
-      - run: ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "/var/www/adachin.me/deploy-me.sh"
- 
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - deploy:
-          filters:
-            branches:
-              only: master
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
