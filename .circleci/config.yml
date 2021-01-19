@@ -1,11 +1,12 @@
-version: 2.1
+version: 2
+
 orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1-stretch-node
+      - image: circleci/ruby:2.6.3-stretch-node
     executor: ruby/default
     steps:
       - checkout
@@ -13,7 +14,6 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
-
   deploy:
     machine:
       enabled: true
@@ -31,4 +31,3 @@ workflows:
           filters:
             branches:
               only: master
-
