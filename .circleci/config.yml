@@ -54,7 +54,7 @@ workflows:
           account-url: AWS_ECR_ACCOUNT_URL
           create-repo: true
           dockerfile: docker/Dockerfile
-          repo: "${APP_NAME}_app"
+          repo: "stockapp_app"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
@@ -63,4 +63,4 @@ workflows:
           family: "nginx-rails-app2"
           cluster-name: "nginx-rails"
           service-name: "ecs-rails"
-          container-image-name-updates:  'container=app,image-and-tag=${AWS_ECR_ACCOUNT_URL}/${APP_NAME}_app:${CIRCLE_SHA1}'      
+          container-image-name-updates:  'container=app,image-and-tag=${AWS_ECR_ACCOUNT_URL}/stockapp_app:${CIRCLE_SHA1}'      
