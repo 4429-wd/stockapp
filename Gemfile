@@ -67,7 +67,6 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'devise'
 gem 'active_hash', '~> 2.3.0'
-gem 'haml-rails'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -87,6 +86,5 @@ gem "font-awesome-sass"
 gem 'jquery-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
-gem 'devise'
 gem 'sqlite3'
 gem 'aws-sdk-s3', require: false
