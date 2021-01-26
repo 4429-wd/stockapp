@@ -16,7 +16,7 @@ jobs:
       - ruby/bundle-install
   deploy:
     machine:
-      image: true
+      image: circleci/classic:edge
     steps:
       - add_ssh_keys:
           fingerprints:
