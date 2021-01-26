@@ -24,43 +24,26 @@ jobs:
  
 workflows:
   version: 2
-  deploy:
+  build-test-and-deploy:
     jobs:
+      - build
       - deploy:
-      - filters:
-        branches:
-          only: circlecl
-  deploy-web:
-    jobs:
-      - aws-ecr/build-and-push-image:
-        filters:
-          branches:
-            only: 
-        account-url: 3.114.40.165
-        create-repo: true
-        repo: "$stockapp_web"
-        region:
-        tag:
-      - aws-ecs/deploy-service-update:
-          requires:
-            - aws-ecr/build-and-push-image
-          family: "nginx-rails-app2"
-          cluster-name:  "nginx-rails"
-          service-name: "ecs-rails"
-          container-image-name-updates: 'container=web,image-and-tag=$/$stockapp_web:${CIRCLE_SHA1}'
-  deploy-app:
-    jobs:
-      - aws-ecr/build-and-push-image:
-          account-url: AWS_ECR_ACCOUNT_URL
-          create-repo: true
-          dockerfile: docker/Dockerfile
-          repo: "stockapp_app"
-          region: AWS_REGION
-          tag: "${CIRCLE_SHA1}"
-      - aws-ecs/deploy-service-update:
-          requires:
-            - aws-ecr/build-and-push-image
-          family: "nginx-rails-app2"
-          cluster-name: "nginx-rails"
-          service-name: "ecs-rails"
-          container-image-name-updates:  'container=app,image-and-tag=${AWS_ECR_ACCOUNT_URL}/stockapp_app:${CIRCLE_SHA1}'      
+          requires:   #buildジョブが完了されるまで処理が待機されるように設定
+            - build
+          filters:
+            branches:
+              only: master
+  # build-and-deploy:
+  #   jobs:
+  #     - aws-ecr/build_and_push_image:
+  #         account-url: "685226300427.dkr.ecr.us-west-2.amazonaws.com"
+  #         repo: "${AWS_RESOURCE_NAME_PREFIX}"
+  #         region: us-west-2
+  #         tag: "${CIRCLE_SHA1}"
+  #     - aws-ecs/deploy-service-update:
+  #         requires:
+  #           - aws-ecr/build_and_push_image
+  #         aws-region: us-west-2
+  #         family: "${AWS_RESOURCE_NAME_PREFIX}-service"
+  #         cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster"
+  #         container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service,tag=${CIRCLE_SHA1}"     
