@@ -21,7 +21,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "ad:36:06:b7:9b:89:84:f5:5c:e2:42:b2:76:c5:5b:23" #上記メモったハッシュを指定
-      - run: ssh -p $stockapp.pem ec2-user@3.114.40.165 "cd /var/www/rails/stockapp/"
+      - run: ssh -i $stockapp.pem ec2-user@3.114.40.165 "cd /var/www/rails/stockapp/"
  
 workflows:
   version: 2
