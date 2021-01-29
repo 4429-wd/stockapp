@@ -29,8 +29,8 @@ workflows:
     jobs:
       # - build
       - deploy:
-          requires:   #buildジョブが完了されるまで処理が待機されるように設定
-            - build
+          # requires:   #buildジョブが完了されるまで処理が待機されるように設定
+          #   - build
           filters:
             branches:
               only: master
