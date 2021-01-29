@@ -1,19 +1,19 @@
-.main-chat
-  .member-list
-    .left-list
+-# .main-chat
+-#   .member-list
+-#     .left-list
       
-      .left-list__members
+-#       .left-list__members
 
-    .right-list
-      =link_to "Edit", class: "editlink"
+-#     .right-list
+-#       =link_to "Edit", class: "editlink"
 
-  .messages
+-#   .messages
  
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
-      .form__space
-        = f.label :image, class: 'form__space__image' do
-          = icon('fa','image', class: 'img')
-          = f.file_field :image, class: 'hide'
-      = f.submit 'Send', class: 'form__submit'
+-#   .form
+-#     = form_for [@group, @message] do |f|
+-#       = f.text_field :content, class: 'form__comment', placeholder: 'type a message'
+-#       .form__space
+-#         = f.label :image, class: 'form__space__image' do
+-#           = icon('fa','image', class: 'img')
+-#           = f.file_field :image, class: 'hide'
+-#       = f.submit 'Send', class: 'form__submit'
