@@ -4,16 +4,16 @@ orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.5.1-stretch-node
-    steps:
-      - checkout
-      - run: gem install bundler:1.17.3
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+  # build:
+  #   docker:
+  #     - image: circleci/ruby:2.5.1-stretch-node
+  #   steps:
+  #     - checkout
+  #     - run: gem install bundler:1.17.3
+  #     - run:
+  #         name: Which bundler?
+  #         command: bundle -v
+  #     - ruby/bundle-install
   deploy:
     machine:
       image: circleci/classic:edge
@@ -27,10 +27,10 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - build
+      # - build
       - deploy:
-          requires:   #buildジョブが完了されるまで処理が待機されるように設定
-            - build
+          # requires:   #buildジョブが完了されるまで処理が待機されるように設定
+          #   - build
           filters:
             branches:
               only: master
