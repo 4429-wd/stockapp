@@ -1,4 +1,4 @@
-app_path = File.expand_path('../../../', __FILE__)
+app_path = File.expand_path('/var/www/rails/stockapp/')
 
 worker_processes 1
 
