@@ -32,6 +32,13 @@ Things you may want to cover:
 自動デプロイとして、CircleCIを使用しています。
 CircleCIにこのアプリの公開鍵のコードを入力することによりEC2と連携し、さらにGitHubでGitPullをするとデプロイされる仕組みになっています。
 
+# 使用方法
+
+
+# リンク
+http://3.114.40.165/
+テスト用アドレス:testman@gmail.com
+テスト用パスワード：testman55
 
 #  STOCKーAPP DB設計
 ## usersテーブル
