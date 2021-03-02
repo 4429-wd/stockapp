@@ -22,7 +22,7 @@
           %td
             =stock.count
           %td
-            =link_to "取消",stock_path(stock.id), method: :delete, data: { confirm: '削除してよろしいですか?' }
+            =link_to "取消",stock_path(stock.id), method: :delete, data: { confirm: '削除してよろしいですか?' }, id: :cancel
       
     .back
       = link_to "戻る", root_path,class: "back__btn"
