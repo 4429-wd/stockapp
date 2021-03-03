@@ -13,7 +13,7 @@
   
   .items-table{
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 100vh;
     border-collapse: collapse;
     background-color: $potato;
     &__head{
@@ -44,3 +44,12 @@
           width: 200px;
         }
 
+        .del{
+          width: 100px;
+        }
+
+        #cancel{
+          color: $tomato;
+        }
+        
+        
