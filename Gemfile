@@ -81,6 +81,7 @@ group :productiondo, :staging do
   gem 'unicorn', '5.4.1'
 end
 
+gem "carrierwave"
 gem "font-awesome-sass"
 gem 'jquery-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
