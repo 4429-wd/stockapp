@@ -359,6 +359,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash (~> 2.3.0)
+  activerecord
   ancestry
   aws-sdk-s3
   bootsnap (>= 1.1.0)
