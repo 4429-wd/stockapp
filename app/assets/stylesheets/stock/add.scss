@@ -24,10 +24,11 @@
       color: $tomato;
     }
 
-    .back{
-      text-align: center;
-      &__btn{
-      color: $tomato;
-      text-decoration: none;
-      }
+    .form-decide__btn{
+      background-color: $tomato;
+      border: none;
+      color: $white;
+      height: $size_large;
+      font-size: $size_middium;
+      padding: 0 20px;
     }
