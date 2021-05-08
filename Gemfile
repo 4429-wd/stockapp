@@ -81,6 +81,7 @@ group :productiondo, :staging do
   gem 'unicorn', '5.4.1'
 end
 
+gem "actionpack"
 gem "activerecord", "5.2.4.5"
 gem "carrierwave"
 gem "font-awesome-sass"
