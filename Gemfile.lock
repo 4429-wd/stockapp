@@ -362,6 +362,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack
   active_hash (~> 2.3.0)
   activerecord (= 5.2.4.5)
   ancestry
